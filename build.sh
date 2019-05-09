@@ -8,7 +8,7 @@ for tag in $tags; do
     echo USER root >> ./Dockerfile
     echo "RUN echo http://mirrors.aliyun.com/alpine/v3.9/main/ > /etc/apk/repositories \
   && apk update \
-  && apk add tzdata \
+  && apk add tzdata git \
   && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
   && echo Asia/Shanghai > /etc/timezone" >> ./Dockerfile
     docker build . -t zhikesmartstudy/node:$tag
