@@ -15,5 +15,5 @@ for tag in $tags; do
     USER root
 EOF
     docker build . -t zhikesmartstudy/node:$tag
-    # docker push zhikesmartstudy/node:$tag
+    docker push zhikesmartstudy/node:$tag
 done
